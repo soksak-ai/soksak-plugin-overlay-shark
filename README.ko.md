@@ -1,4 +1,4 @@
-# soksak-plugin-shark
+# soksak-plugin-overlay-shark
 
 앱 위를 **유유자적 헤엄쳐 다니는 SOKSAK 상어 마스코트** 플러그인. 워드마크 SOKSAK
 자체가 상어(S=머리, K=꼬리지느러미)이고, 그 상어가 창 전체를 상하좌우 자율주행한다.
@@ -9,7 +9,7 @@
 
 ```
 # git 저장소를 ~/.soksak/plugins/ 로 clone 하거나, dev 로 로컬 경로 로드
-sok plugin.dev.load '{"path":"/path/to/soksak-plugin-shark"}'   # 개발 로드
+sok plugin.dev.load '{"path":"/path/to/soksak-plugin-overlay-shark"}'   # 개발 로드
 ```
 
 활성화하면 즉시 상어가 헤엄을 시작한다.
@@ -18,9 +18,9 @@ sok plugin.dev.load '{"path":"/path/to/soksak-plugin-shark"}'   # 개발 로드
 
 | 명령 | 설명 |
 |---|---|
-| `plugin.soksak-plugin-shark.toggle` | 상어 보이기/숨기기(숨기면 rAF 완전 정지) |
-| `plugin.soksak-plugin-shark.mode '{"reactive":true}'` | 반응형 on/off — on 이면 커서가 가까이 오면 슬쩍 피한다(off=순수 장식, 통과) |
-| `plugin.soksak-plugin-shark.speed '{"liveliness":1.5}'` | 활기 배수 0.3~3 (이동·헤엄 전반 속도) |
+| `plugin.soksak-plugin-overlay-shark.toggle` | 상어 보이기/숨기기(숨기면 rAF 완전 정지) |
+| `plugin.soksak-plugin-overlay-shark.mode '{"reactive":true}'` | 반응형 on/off — on 이면 커서가 가까이 오면 슬쩍 피한다(off=순수 장식, 통과) |
+| `plugin.soksak-plugin-overlay-shark.speed '{"liveliness":1.5}'` | 활기 배수 0.3~3 (이동·헤엄 전반 속도) |
 
 ## 어떻게 동작하나
 
