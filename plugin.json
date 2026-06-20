@@ -1,10 +1,16 @@
 {
   "spec": "soksak-spec-plugin@0.0.1",
   "id": "soksak-plugin-shark",
-  "name": "shork shark",
+  "name": {
+    "en": "shork shark",
+    "ko": "shork shark"
+  },
   "version": "0.0.1",
   "repo": "https://github.com/soksak-ai/soksak-plugin-shark.git",
-  "description": "앱 위를 유유자적 헤엄쳐 다니는 shork shark — SOKSAK 워드마크가 곧 상어(S=머리, K=꼬리). 마릿수·활기 조절.",
+  "description": {
+    "en": "A shork shark lazily swimming across the app — the SOKSAK wordmark is the shark itself (S=head, K=tail). Shark count and liveliness are adjustable.",
+    "ko": "앱 위를 유유자적 헤엄쳐 다니는 shork shark — SOKSAK 워드마크가 곧 상어(S=머리, K=꼬리). 마릿수·활기 조절."
+  },
   "entry": "main.js",
   "permissions": [
     "ui:overlay:screen",
