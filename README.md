@@ -1,4 +1,4 @@
-# soksak-plugin-shark
+# soksak-plugin-overlay-shark
 
 A SOKSAK shark mascot that **swims freely across the app window**. The wordmark SOKSAK
 is itself a shark (S=head, K=tail fin), and that shark autonomously navigates the entire
@@ -10,7 +10,7 @@ target thrashes the tail vigorously; leisurely cruising flows gently.
 
 ```
 # Clone the git repository into ~/.soksak/plugins/, or load a local path as dev
-sok plugin.dev.load '{"path":"/path/to/soksak-plugin-shark"}'   # dev load
+sok plugin.dev.load '{"path":"/path/to/soksak-plugin-overlay-shark"}'   # dev load
 ```
 
 Once activated, the shark begins swimming immediately.
@@ -19,9 +19,9 @@ Once activated, the shark begins swimming immediately.
 
 | Command | Description |
 |---|---|
-| `plugin.soksak-plugin-shark.toggle` | Show/hide the shark (hiding stops rAF entirely) |
-| `plugin.soksak-plugin-shark.mode '{"reactive":true}'` | Reactive mode on/off — when on, the shark subtly dodges the cursor (off=pure decoration, passes through) |
-| `plugin.soksak-plugin-shark.speed '{"liveliness":1.5}'` | Liveliness multiplier 0.3–3 (affects overall movement and swimming speed) |
+| `plugin.soksak-plugin-overlay-shark.toggle` | Show/hide the shark (hiding stops rAF entirely) |
+| `plugin.soksak-plugin-overlay-shark.mode '{"reactive":true}'` | Reactive mode on/off — when on, the shark subtly dodges the cursor (off=pure decoration, passes through) |
+| `plugin.soksak-plugin-overlay-shark.speed '{"liveliness":1.5}'` | Liveliness multiplier 0.3–3 (affects overall movement and swimming speed) |
 
 ## How It Works
 
