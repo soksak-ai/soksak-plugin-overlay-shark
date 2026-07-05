@@ -177,11 +177,11 @@ export default {
       else { window.removeEventListener("mousemove", onMove); mx = -1e5; }
     }
 
-    const reg = (n, description, triggers, params, h) => ctx.subscriptions.push(ctx.app.commands.register(n, { description, triggers, params, handler: h }));
-    reg("toggle", "Toggle the SOKSAK shark mascot overlay on or off. Use to show or hide the swimming sharks.", { ko: "상어 마스코트 앰비언트 켜기 끄기 숨기기" }, {}, () => { visible = !visible; layer.style.display = visible ? "block" : "none"; onVis(); return { visible }; });
-    reg("mode", "Enable or disable cursor-avoidance reactive mode. When on, sharks steer away from the mouse cursor.", { ko: "상어 커서 회피 반응형 모드 켜기 끄기" }, { reactive: { type: "boolean", description: "커서 회피 반응형 on/off" } }, (p) => { setReactive(!!(p && p.reactive)); return { reactive }; });
-    reg("speed", "Set the shark liveliness multiplier (0.3–3, default 1). Higher values make sharks swim faster and turn more aggressively.", { ko: "상어 수영 속도 활기 배수 조절" }, { liveliness: { type: "number", description: "활기 배수 0.3~3" } }, (p) => { liveliness = clamp(Number(p && p.liveliness) || 1, 0.3, 3); return { liveliness }; });
-    reg("count", "Set the number of shark mascots on screen (1–6, default 2).", { ko: "상어 마스코트 개수 마릿수 조절" }, { n: { type: "number", description: "상어 수 1~6(기본 2)" } }, (p) => { const n = clamp(Math.round(Number(p && p.n) || 2), 1, 6); spawn(n); if (!visible) layer.style.display = "none"; return { count: n }; });
+    const reg = (n, description, triggers, params, h, message) => ctx.subscriptions.push(ctx.app.commands.register(n, { description, triggers, params, handler: h, message }));
+    reg("toggle", "Toggle the SOKSAK shark mascot overlay on or off. Use to show or hide the swimming sharks.", { ko: "상어 마스코트 앰비언트 켜기 끄기 숨기기" }, {}, () => { visible = !visible; layer.style.display = visible ? "block" : "none"; onVis(); return { visible }; }, (d) => d.visible ? "상어를 켰습니다." : "상어를 껐습니다.");
+    reg("mode", "Enable or disable cursor-avoidance reactive mode. When on, sharks steer away from the mouse cursor.", { ko: "상어 커서 회피 반응형 모드 켜기 끄기" }, { reactive: { type: "boolean", description: "커서 회피 반응형 on/off" } }, (p) => { setReactive(!!(p && p.reactive)); return { reactive }; }, (d) => d.reactive ? "커서 회피 모드를 켰습니다." : "커서 회피 모드를 껐습니다.");
+    reg("speed", "Set the shark liveliness multiplier (0.3–3, default 1). Higher values make sharks swim faster and turn more aggressively.", { ko: "상어 수영 속도 활기 배수 조절" }, { liveliness: { type: "number", description: "활기 배수 0.3~3" } }, (p) => { liveliness = clamp(Number(p && p.liveliness) || 1, 0.3, 3); return { liveliness }; }, (d) => `활기를 ${d.liveliness}배로 설정했습니다.`);
+    reg("count", "Set the number of shark mascots on screen (1–6, default 2).", { ko: "상어 마스코트 개수 마릿수 조절" }, { n: { type: "number", description: "상어 수 1~6(기본 2)" } }, (p) => { const n = clamp(Math.round(Number(p && p.n) || 2), 1, 6); spawn(n); if (!visible) layer.style.display = "none"; return { count: n }; }, (d) => `상어 ${d.count}마리를 띄웠습니다.`);
 
     ctx.subscriptions.push({ dispose() {
       stop();
