@@ -13,5 +13,11 @@
     "vitest": "^4",
     "jsdom": "^25",
     "soksak-plugin-doctor": "github:soksak-ai/soksak-plugin-doctor"
+  },
+  "soksakRelease": {
+    "kind": "plugin",
+    "id": "soksak-plugin-overlay-shark",
+    "repository": "https://github.com/soksak-ai/soksak-plugin-overlay-shark",
+    "manifest": "release.json"
   }
 }

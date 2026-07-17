@@ -6,10 +6,9 @@
     "ko": "shork shark"
   },
   "version": "0.0.1",
-  "repo": "https://github.com/soksak-ai/soksak-plugin-overlay-shark.git",
   "description": {
-    "en": "A shork shark lazily swimming across the app — the SOKSAK wordmark is the shark itself (S=head, K=tail). Shark count and liveliness are adjustable.",
-    "ko": "앱 위를 유유자적 헤엄쳐 다니는 shork shark — SOKSAK 워드마크가 곧 상어(S=머리, K=꼬리). 마릿수·활기 조절."
+    "en": "A shork shark lazily swimming across the app \u2014 the SOKSAK wordmark is the shark itself (S=head, K=tail). Shark count and liveliness are adjustable.",
+    "ko": "\uc571 \uc704\ub97c \uc720\uc720\uc790\uc801 \ud5e4\uc5c4\uccd0 \ub2e4\ub2c8\ub294 shork shark \u2014 SOKSAK \uc6cc\ub4dc\ub9c8\ud06c\uac00 \uace7 \uc0c1\uc5b4(S=\uba38\ub9ac, K=\uaf2c\ub9ac). \ub9c8\ub9bf\uc218\u00b7\ud65c\uae30 \uc870\uc808."
   },
   "entry": "main.js",
   "permissions": [
@@ -22,28 +21,28 @@
         "name": "toggle",
         "title": {
           "en": "Toggle shork",
-          "ko": "shork 켜기/끄기"
+          "ko": "shork \ucf1c\uae30/\ub044\uae30"
         }
       },
       {
         "name": "mode",
         "title": {
           "en": "Interaction mode",
-          "ko": "인터랙션 모드"
+          "ko": "\uc778\ud130\ub799\uc158 \ubaa8\ub4dc"
         }
       },
       {
         "name": "speed",
         "title": {
           "en": "Liveliness",
-          "ko": "활기 설정"
+          "ko": "\ud65c\uae30 \uc124\uc815"
         }
       },
       {
         "name": "count",
         "title": {
           "en": "Shark count",
-          "ko": "상어 수"
+          "ko": "\uc0c1\uc5b4 \uc218"
         }
       }
     ]
